@@ -53,7 +53,7 @@ ALTER COLUMN minimum_nights_avg_ntm FLOAT(23);
 ALTER TABLE listings
 ALTER COLUMN maximum_nights_avg_ntm FLOAT(23);
 
---changing 't' and 'f' values (only 3 total) to t = 30 and f = 0
+--changing 't' and 'f' values (only 3 total) to t = NULL and f = 0
 SELECT availability_30
 FROM listings
 WHERE TRY_CAST(availability_30 AS INT) IS NULL;
